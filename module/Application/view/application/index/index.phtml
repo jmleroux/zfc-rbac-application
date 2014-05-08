@@ -1,0 +1,95 @@
+<div class="jumbotron">
+    <h1>
+        <?php echo 'Welcome to ZfcRbac Application' ?>
+    </h1>
+
+    <p>
+        <?php echo 'Congratulations! You have successfully installed the ZfcRbac Application.' ?>
+    </p>
+
+    <p>
+        <a class="btn btn-success btn-lg" href="https://github.com/jmleroux/zfc-rbac-application" target="_blank">
+            <?php echo 'ZfcRbac Application on GitHub' ?> &raquo;
+        </a>
+    </p>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Your identity</h3>
+            </div>
+            <div class="panel-body">
+                <?php if ($this->identity()): ?>
+                    <p><?php var_dump($this->identity()) ?></p>
+                <?php else: ?>
+                    <p>Your are not authticated</p>
+                <?php endif ?>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Member only route</h3>
+            </div>
+            <div class="panel-body">
+                <p>
+                    A route only for users with the "member" role
+                </p>
+
+                <p>
+                    <a class="btn btn-success pull-right"
+                       href="<?php echo $this->url('member-only') ?>">
+                        Test &raquo;
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Admin only route</h3>
+            </div>
+            <div class="panel-body">
+                <p>
+                    A route only for users with the "admin" role
+                </p>
+
+                <p>
+                    <a class="btn btn-success pull-right"
+                       href="<?php echo $this->url('admin-only') ?>">
+                        Test &raquo;
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Admin or member route</h3>
+            </div>
+            <div class="panel-body">
+                <p>
+                    A route only for users with the "admin" or "member" role
+                </p>
+
+                <p>
+                    <a class="btn btn-success pull-right"
+                       href="<?php echo $this->url('admin-or-member') ?>">
+                        Test &raquo;
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+{
+    "name": "jmleroux/zfc-rbac-application",
+    "description": "An example application for ZfcRbac",
+    "license": "MIT",
+    "homepage": "https://github.com/jmleroux/zfc-rbac-application",
+    "require": {
+        "php": ">=5.3.3",
+        "jmleroux/zf-simple-auth": "dev-master",
+        "zf-commons/zfc-rbac": "dev-master",
+        "zendframework/zendframework": "2.3.*"
+    }
+}
