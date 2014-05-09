@@ -18,30 +18,8 @@
 
 return [
     'zfc_rbac' => [
-        /**
-         * Key that is used to fetch the identity provider
-         *
-         * Please note that when an identity is found, it MUST implements the ZfcRbac\Identity\IdentityProviderInterface
-         * interface, otherwise it will throw an exception.
-         */
         'identity_provider' => 'Application\Authentication\RbacIdentityProvider',
-        /**
-         * Set the guest role
-         *
-         * This role is used by the authorization service when the authentication service returns no identity
-         */
         'guest_role' => 'guest',
-        /**
-         * Set the guards
-         *
-         * You must comply with the various options of guards. The format must be of the following format:
-         *
-         *      'guards' => [
-         *          'ZfcRbac\Guard\RouteGuard' => [
-         *              // options
-         *          ]
-         *      ]
-         */
         'guards' => [
             'ZfcRbac\Guard\RouteGuard' => [
                 'admin-or-member' => ['admin', 'member'],
@@ -49,32 +27,7 @@ return [
                 'admin-only' => ['admin']
             ]
         ],
-        /**
-         * As soon as one rule for either route or controller is specified, a guard will be automatically
-         * created and will start to hook into the MVC loop.
-         *
-         * If the protection policy is set to DENY, then any route/controller will be denied by
-         * default UNLESS it is explicitly added as a rule. On the other hand, if it is set to ALLOW, then
-         * not specified route/controller will be implicitly approved.
-         *
-         * DENY is the most secure way, but it is more work for the developer
-         */
         'protection_policy' => \ZfcRbac\Guard\GuardInterface::POLICY_ALLOW,
-        /**
-         * Configuration for role provider
-         *
-         * It must be an array that contains configuration for the role provider. The provider config
-         * must follow the following format:
-         *
-         *      'ZfcRbac\Role\InMemoryRoleProvider' => [
-         *          'role1' => [
-         *              'children'    => ['children1', 'children2'], // OPTIONAL
-         *              'permissions' => ['edit', 'read'] // OPTIONAL
-         *          ]
-         *      ]
-         *
-         * Supported options depend of the role provider, so please refer to the official documentation
-         */
         'role_provider' => [
             'ZfcRbac\Role\InMemoryRoleProvider' => [
                 'admin' => [
@@ -86,13 +39,7 @@ return [
                 ]
             ]
         ],
-        /**
-         * Configure the unauthorized strategy. It is used to render a template whenever a user is unauthorized
-         */
         'unauthorized_strategy' => [
-            /**
-             * Set the template name to render
-             */
             'template' => 'error/403'
         ],
         /**
@@ -103,17 +50,17 @@ return [
             /**
              * Enable redirection when the user is connected
              */
-            // 'redirect_when_connected' => true,
+//            'redirect_when_connected' => true,
 
             /**
              * Set the route to redirect when user is connected (of course, it must exist!)
              */
-            // 'redirect_to_route_connected' => 'home',
+//            'redirect_to_route_connected' => 'home',
 
             /**
              * Set the route to redirect when user is disconnected (of course, it must exist!)
              */
-            // 'redirect_to_route_disconnected' => 'login',
+//            'redirect_to_route_disconnected' => 'login',
 
             /**
              * If a user is unauthorized and redirected to another route (login, for instance), should we
@@ -127,11 +74,5 @@ return [
              */
             // 'previous_uri_query_key' => 'redirectTo'
         ],
-        /**
-         * Various plugin managers for guards and role providers. Each of them must follow a common
-         * plugin manager config format, and can be used to create your custom objects
-         */
-        // 'guard_manager'               => [],
-        // 'role_provider_manager'       => []
     ]
 ];
