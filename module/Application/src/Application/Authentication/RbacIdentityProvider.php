@@ -5,10 +5,10 @@ namespace Application\Authentication;
 use Zend\Authentication\AuthenticationService;
 use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
-use ZfcRbac\Identity\IdentityInterface;
-use ZfcRbac\Identity\IdentityProviderInterface;
+use ZfcRbac\Identity\StandardIdentity;
+use ZfSimpleAuth\Authentication\Identity;
 
-class RbacIdentityProvider implements FactoryInterface, IdentityProviderInterface
+class RbacIdentityProvider implements FactoryInterface
 {
     /**
      * @var AuthenticationService $authenticationService
@@ -17,23 +17,14 @@ class RbacIdentityProvider implements FactoryInterface, IdentityProviderInterfac
 
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
-        /** @var AuthenticationService $authenticationService */
         $this->authenticationService = $serviceLocator->get('Zend\Authentication\AuthenticationService');
-        return $this;
-    }
-
-    /**
-     * Get the identity
-     *
-     * @return IdentityInterface|null
-     */
-    public function getIdentity()
-    {
+        /** @var Identity $identity */
         $identity = $this->authenticationService->getIdentity();
-        $rbacIdentity = new RbacIdentity();
+        $roles = array();
         if ($identity) {
-            $rbacIdentity->setRoles($identity->getRoles());
+            $roles = $identity->getRoles();
         }
+        $rbacIdentity = new StandardIdentity($roles);
         return $rbacIdentity;
     }
 }

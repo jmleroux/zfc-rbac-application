@@ -6,7 +6,7 @@
     "require": {
         "php": ">=5.3.3",
         "jmleroux/zf-simple-auth": "dev-master",
-        "zf-commons/zfc-rbac": "dev-master",
-        "zendframework/zendframework": "2.3.*"
+        "zf-commons/zfc-rbac": "~0.2",
+        "zendframework/zendframework": "~2.3"
     }
 }

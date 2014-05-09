@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "bfcb68c4a54dac43ad8efc4acf87175f",
+    "hash": "50703243b73435b821db4fe77b26c523",
     "packages": [
         {
             "name": "jmleroux/zf-simple-auth",
@@ -202,37 +202,26 @@
         },
         {
             "name": "zf-commons/zfc-rbac",
-            "version": "dev-master",
+            "version": "0.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ZF-Commons/zfc-rbac.git",
-                "reference": "bd6a65d1cd882ea05a547a03b1021b9016e24756"
+                "reference": "509af02b0e8b2348b91a5616aa9f360a15d9f78f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ZF-Commons/zfc-rbac/zipball/bd6a65d1cd882ea05a547a03b1021b9016e24756",
-                "reference": "bd6a65d1cd882ea05a547a03b1021b9016e24756",
+                "url": "https://api.github.com/repos/ZF-Commons/zfc-rbac/zipball/509af02b0e8b2348b91a5616aa9f360a15d9f78f",
+                "reference": "509af02b0e8b2348b91a5616aa9f360a15d9f78f",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.4",
-                "zendframework/zend-mvc": "~2.2",
-                "zendframework/zend-servicemanager": "~2.2",
-                "zfr/rbac": "~1.2"
-            },
-            "require-dev": {
-                "doctrine/common": "~2.4",
-                "doctrine/doctrine-module": "~0.8",
-                "doctrine/doctrine-orm-module": "~0.8",
-                "phpunit/phpunit": "~3.7",
-                "satooshi/php-coveralls": "~0.6",
-                "squizlabs/php_codesniffer": "1.4.*",
-                "zendframework/zend-developer-tools": "dev-master",
-                "zendframework/zendframework": "~2.2"
-            },
-            "suggest": {
-                "doctrine/doctrine-module": "if you want to use Doctrine role provider",
-                "zendframework/zend-developer-tools": "if you want to show information about the roles"
+                "php": ">=5.3.3",
+                "zendframework/zend-authentication": ">=2.1",
+                "zendframework/zend-mvc": ">=2.1",
+                "zendframework/zend-permissions-rbac": ">=2.1",
+                "zendframework/zend-servicemanager": ">=2.1",
+                "zendframework/zend-session": ">=2.1",
+                "zendframework/zend-view": ">=2.1"
             },
             "type": "library",
             "autoload": {
@@ -241,9 +230,6 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
             "authors": [
                 {
                     "name": "Kyle Spraggs",
@@ -257,64 +243,12 @@
                 }
             ],
             "description": "Zend Framework 2 Module that provides a layer of features of Zend\\Permissions\\Rbac",
-            "homepage": "http://www.github.com/ZF-Commons/zfc-rbac",
+            "homepage": "http://www.github.com/ZF-Commons/ZfcRbac/",
             "keywords": [
                 "module",
-                "permissions",
-                "rbac",
                 "zf2"
             ],
-            "time": "2014-05-08 06:23:36"
-        },
-        {
-            "name": "zfr/rbac",
-            "version": "1.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zf-fr/rbac.git",
-                "reference": "493711bfc2a637fd7c6f23b71b7b55a621c35d9d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zf-fr/rbac/zipball/493711bfc2a637fd7c6f23b71b7b55a621c35d9d",
-                "reference": "493711bfc2a637fd7c6f23b71b7b55a621c35d9d",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~3.7",
-                "satooshi/php-coveralls": "~0.6",
-                "squizlabs/php_codesniffer": "1.4.*",
-                "zendframework/zend-servicemanager": "~2.2"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Rbac\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Michaël Gallego",
-                    "email": "mic.gallego@gmail.com",
-                    "homepage": "http://www.michaelgallego.fr/"
-                }
-            ],
-            "description": "Zend Framework 3 prototype for Zend\\Permissions\\Rbac.",
-            "homepage": "https://github.com/zf-fr/rbac",
-            "keywords": [
-                "rbac",
-                "security",
-                "zf2",
-                "zf3"
-            ],
-            "time": "2014-02-06 14:18:34"
+            "time": "2014-03-18 17:38:19"
         }
     ],
     "packages-dev": [
@@ -325,8 +259,7 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "jmleroux/zf-simple-auth": 20,
-        "zf-commons/zfc-rbac": 20
+        "jmleroux/zf-simple-auth": 20
     },
     "platform": {
         "php": ">=5.3.3"
