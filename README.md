@@ -1,4 +1,4 @@
 zfc-rbac-application
 ====================
 
-An example application for ZfcRbac using 0.2 branch
+An example application for ZfcRbac using 0.2 branch and Zend\Db providers

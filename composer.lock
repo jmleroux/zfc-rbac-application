@@ -3,8 +3,51 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "50703243b73435b821db4fe77b26c523",
+    "hash": "c6e1cc49c659831341c680da2b08b96e",
     "packages": [
+        {
+            "name": "jmleroux/jml-rbac-zdb",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jmleroux/JmlRbacZdb.git",
+                "reference": "c3eaf6a1203091ddd41d92afcd84f3768f0c7b6e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jmleroux/JmlRbacZdb/zipball/c3eaf6a1203091ddd41d92afcd84f3768f0c7b6e",
+                "reference": "c3eaf6a1203091ddd41d92afcd84f3768f0c7b6e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "zf-commons/zfc-rbac": "~0.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "JmlRbacZdb\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "JM Leroux",
+                    "email": "jmleroux.pro@gmail.com"
+                }
+            ],
+            "description": "Zend providers for ZfcRbac module",
+            "homepage": "http://www.github.com/jmleroux/JmlRbacZdb/",
+            "keywords": [
+                "module",
+                "rbac",
+                "zf2"
+            ],
+            "time": "2014-05-10 16:05:43"
+        },
         {
             "name": "jmleroux/zf-simple-auth",
             "version": "dev-master",
@@ -259,7 +302,8 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "jmleroux/zf-simple-auth": 20
+        "jmleroux/zf-simple-auth": 20,
+        "jmleroux/jml-rbac-zdb": 20
     },
     "platform": {
         "php": ">=5.3.3"

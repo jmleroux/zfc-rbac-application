@@ -38,6 +38,9 @@ $settings = array(
             array('route' => 'member-only', 'roles' => 'member'),
             array('route' => 'other-only', 'roles' => 'other'),
             array('route' => 'admin-or-member', 'roles' => array('member', 'admin')),
+            array('route' => 'read-permission', 'permissions' => 'read'),
+            array('route' => 'update-permission', 'permissions' => 'edit'),
+            array('route' => 'delete-permission', 'permissions' => 'delete'),
         ),
     ),
 
@@ -51,7 +54,9 @@ $settings = array(
         ),
         'ZfcRbac\Provider\Generic\Permission\InMemory' => array(
             'permissions' => array(
-                'admin' => array('admin'),
+                'admin' => array('delete'),
+                'member' => array('read'),
+                'other' => array('edit'),
             )
         ),
     ),
