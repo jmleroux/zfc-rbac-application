@@ -39,7 +39,7 @@ $settings = array(
             array('route' => 'other-only', 'roles' => 'other'),
             array('route' => 'admin-or-member', 'roles' => array('member', 'admin')),
             array('route' => 'read-permission', 'permissions' => 'read'),
-            array('route' => 'update-permission', 'permissions' => 'update'),
+            array('route' => 'update-permission', 'permissions' => 'edit'),
             array('route' => 'delete-permission', 'permissions' => 'delete'),
         ),
     ),
@@ -54,12 +54,19 @@ $settings = array(
                 'joinColumn' => 'parent_id',
             ),
         ),
-        'ZfcRbac\Provider\Generic\Permission\InMemory' => array(
-            'permissions' => array(
-                'admin' => array('delete'),
-                'other' => array('update'),
-                'member' => array('read'),
-            )
+        'JmlRbacZdb\Provider\Generic\Permission\ZendDb' => array(
+            'connection' => 'Application\Factory\DbAdapter',
+            'options' => array(
+                'permission_table' => 'permission',
+                'permission_idColumn' => 'id',
+                'permission_nameColumn' => 'name',
+                'role_join_table' => 'role_permission',
+                'role_table' => 'role',
+                'role_idColumn' => 'id',
+                'role_nameColumn' => 'name',
+                'permission_join_column' => 'permission_id',
+                'role_join_column' => 'role_id',
+            ),
         ),
     ),
 
