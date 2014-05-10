@@ -35,7 +35,9 @@ $settings = array(
     'firewalls' => array(
         'ZfcRbac\Firewall\Route' => array(
             array('route' => 'admin-only', 'roles' => 'admin'),
-            array('route' => 'member-only', 'roles' => 'member')
+            array('route' => 'member-only', 'roles' => 'member'),
+            array('route' => 'other-only', 'roles' => 'other'),
+            array('route' => 'admin-or-member', 'roles' => array('member', 'admin')),
         ),
     ),
 
@@ -44,7 +46,7 @@ $settings = array(
             'roles' => array(
                 'admin',
                 'member' => array('admin'),
-                'guest' => array('member'),
+                'other',
             ),
         ),
         'ZfcRbac\Provider\Generic\Permission\InMemory' => array(
