@@ -1,18 +1,7 @@
 <?php
 return array(
     'router' => include __DIR__ . '/router.config.php',
-    'service_manager' => array(
-        'factories' => array(
-            'Application\Authentication\RbacIdentityProvider' => 'Application\Authentication\RbacIdentityProvider',
-            'Application\Factory\DbAdapter' => 'Application\Factory\DbAdapter',
-        ),
-        'abstract_factories' => array(
-            'Zend\Log\LoggerAbstractServiceFactory',
-        ),
-        'aliases' => array(
-            'translator' => 'MvcTranslator',
-        ),
-    ),
+    'service_manager' => include __DIR__ . '/services.config.php',
     'translator' => array(
         'locale' => 'en_US',
         'translation_file_patterns' => array(
@@ -25,7 +14,8 @@ return array(
     ),
     'controllers' => array(
         'invokables' => array(
-            'Application\Controller\Index' => 'Application\Controller\IndexController'
+            'Application\Controller\Index' => 'Application\Controller\IndexController',
+            'Application\Controller\Permissions' => 'Application\Controller\PermissionsController',
         ),
     ),
     'view_manager' => array(
