@@ -11,12 +11,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jmleroux/JmlRbacZdb.git",
-                "reference": "e3ab6f0f09b37a5c98e90bd6f6ee7e03b12bd046"
+                "reference": "c3eaf6a1203091ddd41d92afcd84f3768f0c7b6e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jmleroux/JmlRbacZdb/zipball/e3ab6f0f09b37a5c98e90bd6f6ee7e03b12bd046",
-                "reference": "e3ab6f0f09b37a5c98e90bd6f6ee7e03b12bd046",
+                "url": "https://api.github.com/repos/jmleroux/JmlRbacZdb/zipball/c3eaf6a1203091ddd41d92afcd84f3768f0c7b6e",
+                "reference": "c3eaf6a1203091ddd41d92afcd84f3768f0c7b6e",
                 "shasum": ""
             },
             "require": {
@@ -46,7 +46,7 @@
                 "rbac",
                 "zf2"
             ],
-            "time": "2014-05-10 15:38:36"
+            "time": "2014-05-10 16:05:43"
         },
         {
             "name": "jmleroux/zf-simple-auth",

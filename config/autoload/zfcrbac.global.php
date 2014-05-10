@@ -42,11 +42,13 @@ $settings = array(
     ),
 
     'providers' => array(
-        'ZfcRbac\Provider\Generic\Role\InMemory' => array(
-            'roles' => array(
-                'admin',
-                'member' => array('admin'),
-                'other',
+        'JmlRbacZdb\Provider\AdjacencyList\Role\ZendDb' => array(
+            'connection' => 'Application\Factory\DbAdapter',
+            'options' => array(
+                'table' => 'role',
+                'idColumn' => 'id',
+                'nameColumn' => 'name',
+                'joinColumn' => 'parent_id',
             ),
         ),
         'ZfcRbac\Provider\Generic\Permission\InMemory' => array(
