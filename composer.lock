@@ -11,12 +11,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jmleroux/zf-simple-auth.git",
-                "reference": "30b0cf22bcfea1d21d648c4970a05d6db3fb1419"
+                "reference": "7244ef8349f7a6b0dd0c00de9efc0f81cac2ff4d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jmleroux/zf-simple-auth/zipball/30b0cf22bcfea1d21d648c4970a05d6db3fb1419",
-                "reference": "30b0cf22bcfea1d21d648c4970a05d6db3fb1419",
+                "url": "https://api.github.com/repos/jmleroux/zf-simple-auth/zipball/7244ef8349f7a6b0dd0c00de9efc0f81cac2ff4d",
+                "reference": "7244ef8349f7a6b0dd0c00de9efc0f81cac2ff4d",
                 "shasum": ""
             },
             "require": {
@@ -35,7 +35,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "Minimalistic authentication module",
-            "time": "2014-02-05 20:26:31"
+            "time": "2014-05-11 13:43:42"
         },
         {
             "name": "zendframework/zendframework",
