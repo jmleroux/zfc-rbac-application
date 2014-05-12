@@ -24,19 +24,23 @@ return [
             'ZfcRbac\Guard\RouteGuard' => [
                 'admin-or-member' => ['admin', 'member'],
                 'member-only' => ['member'],
-                'admin-only' => ['admin']
+                'admin-only' => ['admin'],
+                'other-only' => ['other'],
             ]
         ],
         'protection_policy' => \ZfcRbac\Guard\GuardInterface::POLICY_ALLOW,
         'role_provider' => [
             'ZfcRbac\Role\InMemoryRoleProvider' => [
                 'admin' => [
-                    'children' => ['member'],
+                    'children' => ['member', 'other'],
                     'permissions' => ['delete']
                 ],
                 'member' => [
+                    'permissions' => ['read']
+                ],
+                'other' => [
                     'permissions' => ['edit']
-                ]
+                ],
             ]
         ],
         'unauthorized_strategy' => [

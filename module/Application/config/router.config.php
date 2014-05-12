@@ -41,5 +41,45 @@ return array(
                 ),
             ),
         ),
+        'other-only' => array(
+            'type' => 'Zend\Mvc\Router\Http\Literal',
+            'options' => array(
+                'route' => '/other-only',
+                'defaults' => array(
+                    'controller' => 'Application\Controller\Index',
+                    'action' => 'otherOnly',
+                ),
+            ),
+        ),
+        'read-permission' => array(
+            'type' => 'Zend\Mvc\Router\Http\Literal',
+            'options' => array(
+                'route' => '/read-permission',
+                'defaults' => array(
+                    'controller' => 'Application\Controller\Permissions',
+                    'action' => 'read',
+                ),
+            ),
+        ),
+        'update-permission' => array(
+            'type' => 'Zend\Mvc\Router\Http\Literal',
+            'options' => array(
+                'route' => '/update-permission',
+                'defaults' => array(
+                    'controller' => 'Application\Controller\Permissions',
+                    'action' => 'edit',
+                ),
+            ),
+        ),
+        'delete-permission' => array(
+            'type' => 'Zend\Mvc\Router\Http\Literal',
+            'options' => array(
+                'route' => '/delete-permission',
+                'defaults' => array(
+                    'controller' => 'Application\Controller\Permissions',
+                    'action' => 'delete',
+                ),
+            ),
+        ),
     ),
 );

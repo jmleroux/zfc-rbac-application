@@ -33,10 +33,10 @@
 
 <hr/>
 
-<h3>Route guards</h3>
+<h3>Route guards - role based</h3>
 
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-3">
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h3 class="panel-title">Member only route</h3>
@@ -55,7 +55,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-3">
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h3 class="panel-title">Admin only route</h3>
@@ -74,7 +74,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-3">
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h3 class="panel-title">Admin or member route</h3>
@@ -87,6 +87,86 @@
                 <p>
                     <a class="btn btn-success pull-right"
                        href="<?php echo $this->url('admin-or-member') ?>">
+                        Test &raquo;
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Other only route</h3>
+            </div>
+            <div class="panel-body">
+                <p>
+                    A route only for users with the "other" role
+                </p>
+
+                <p>
+                    <a class="btn btn-success pull-right"
+                       href="<?php echo $this->url('other-only') ?>">
+                        Test &raquo;
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr/>
+
+<h3>Route guards - permission based</h3>
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Read route</h3>
+            </div>
+            <div class="panel-body">
+                <p>
+                    A route only for users with the "read" permission
+                </p>
+                <p>
+                    <a class="btn btn-success pull-right"
+                       href="<?php echo $this->url('read-permission') ?>">
+                        Test &raquo;
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Update route</h3>
+            </div>
+            <div class="panel-body">
+                <p>
+                    A route only for users with the "update" permission
+                </p>
+                <p>
+                    <a class="btn btn-success pull-right"
+                       href="<?php echo $this->url('update-permission') ?>">
+                        Test &raquo;
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Delete route</h3>
+            </div>
+            <div class="panel-body">
+                <p>
+                    A route only for users with the "delete" permission
+                </p>
+                <p>
+                    <a class="btn btn-success pull-right"
+                       href="<?php echo $this->url('delete-permission') ?>">
                         Test &raquo;
                     </a>
                 </p>
