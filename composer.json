@@ -4,9 +4,13 @@
     "license": "MIT",
     "homepage": "https://github.com/jmleroux/zfc-rbac-application",
     "require": {
-        "php": ">=5.3.3",
+        "php": ">=5.4",
         "jmleroux/zf-simple-auth": "dev-master",
-        "zf-commons/zfc-rbac": "dev-master",
+        "jmleroux/jml-rbac-zdb": "dev-master",
+        "zf-commons/zfc-rbac": "~2",
         "zendframework/zendframework": "2.3.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.1"
     }
 }

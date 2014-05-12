@@ -29,19 +29,23 @@ return [
             ]
         ],
         'protection_policy' => \ZfcRbac\Guard\GuardInterface::POLICY_ALLOW,
-        'role_provider' => [
-            'ZfcRbac\Role\InMemoryRoleProvider' => [
-                'admin' => [
-                    'children' => ['member', 'other'],
-                    'permissions' => ['delete']
-                ],
-                'member' => [
-                    'permissions' => ['read']
-                ],
-                'other' => [
-                    'permissions' => ['edit']
-                ],
+        'role_provider_manager' => [
+            'factories' => [
+                'JmlRbacZdb\Role\ZendDbRoleProvider' => 'JmlRbacZdb\Factory\ZendDbRoleProviderFactory'
             ]
+        ],
+        'role_provider' => [
+            'JmlRbacZdb\Role\ZendDbRoleProvider' => [
+                'connection' => 'Application\Factory\DbAdapter',
+                'options' => [
+                    'role_table' => 'role',
+                    'role_name_column' => 'name',
+                    'role_join_column' => 'role',
+                    'permission_table' => 'permission',
+                    'permission_name_column' => 'name',
+                    'permission_join_column' => 'permission',
+                ],
+            ],
         ],
         'unauthorized_strategy' => [
             'template' => 'error/403'
