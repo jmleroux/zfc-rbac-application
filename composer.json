@@ -2,12 +2,28 @@
     "name": "jmleroux/zfc-rbac-application",
     "description": "An example application for ZfcRbac",
     "license": "MIT",
+    "authors": [
+        {
+            "name": "JM Leroux",
+            "email": "jmleroux.pro@gmail.com"
+        }
+    ],
     "homepage": "https://github.com/jmleroux/zfc-rbac-application",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/jmleroux/ZfcRbac.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/jmleroux/JmlRbacZdb.git"
+        }
+    ],
     "require": {
         "php": ">=5.4",
         "jmleroux/zf-simple-auth": "dev-master",
-        "jmleroux/jml-rbac-zdb": "dev-master",
-        "zf-commons/zfc-rbac": "~2",
+        "jmleroux/jml-rbac-zdb": "dev-develop",
+        "zf-commons/zfc-rbac": "dev-route-permissions-guard",
         "zendframework/zendframework": "2.3.*"
     },
     "require-dev": {

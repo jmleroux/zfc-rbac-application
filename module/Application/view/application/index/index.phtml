@@ -21,11 +21,7 @@
                 <h3 class="panel-title">Your identity</h3>
             </div>
             <div class="panel-body">
-                <?php if ($this->identity()): ?>
-                    <p><?php var_dump($this->identity()) ?></p>
-                <?php else: ?>
-                    <p>Your are not authenticated</p>
-                <?php endif ?>
+                <p><?php echo $this->identityDetails() ?></p>
             </div>
         </div>
     </div>
@@ -128,6 +124,7 @@
                 <p>
                     A route only for users with the "read" permission
                 </p>
+
                 <p>
                     <a class="btn btn-success pull-right"
                        href="<?php echo $this->url('read-permission') ?>">
@@ -146,6 +143,7 @@
                 <p>
                     A route only for users with the "update" permission
                 </p>
+
                 <p>
                     <a class="btn btn-success pull-right"
                        href="<?php echo $this->url('update-permission') ?>">
@@ -164,6 +162,7 @@
                 <p>
                     A route only for users with the "delete" permission
                 </p>
+
                 <p>
                     <a class="btn btn-success pull-right"
                        href="<?php echo $this->url('delete-permission') ?>">

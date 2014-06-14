@@ -26,6 +26,11 @@ return [
                 'member-only' => ['member'],
                 'admin-only' => ['admin'],
                 'other-only' => ['other'],
+            ],
+            'ZfcRbac\Guard\RoutePermissionsGuard' => [
+                'read-permission' => ['read'],
+                'update-permission' => ['edit'],
+                'delete-permission' => ['delete'],
             ]
         ],
         'protection_policy' => \ZfcRbac\Guard\GuardInterface::POLICY_ALLOW,

@@ -34,4 +34,9 @@ return array(
             __DIR__ . '/../view',
         ),
     ),
+    'view_helpers' => array(
+        'invokables' => array(
+            'identityDetails' => 'Application\View\Helper\IdentityDetails',
+        )
+    ),
 );
