@@ -31,7 +31,14 @@ return [
                 'read-permission' => ['read'],
                 'update-permission' => ['edit'],
                 'delete-permission' => ['delete'],
-            ]
+            ],
+            'ZfcRbac\Guard\ControllerGuard' => [
+                [
+                    'controller' => 'Application\Controller\Permissions',
+                    'actions'    => ['read'],
+                    'roles'      => ['member']
+                ]
+            ],
         ],
         'protection_policy' => \ZfcRbac\Guard\GuardInterface::POLICY_ALLOW,
         'role_provider_manager' => [

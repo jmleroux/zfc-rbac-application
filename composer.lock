@@ -265,12 +265,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jmleroux/ZfcRbac.git",
-                "reference": "2bb5a83438e83cea5e21488527dc572420848e6c"
+                "reference": "6984b01c00ac8492ede6f0ce08a8a06fa63220e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jmleroux/ZfcRbac/zipball/2bb5a83438e83cea5e21488527dc572420848e6c",
-                "reference": "2bb5a83438e83cea5e21488527dc572420848e6c",
+                "url": "https://api.github.com/repos/jmleroux/ZfcRbac/zipball/6984b01c00ac8492ede6f0ce08a8a06fa63220e7",
+                "reference": "6984b01c00ac8492ede6f0ce08a8a06fa63220e7",
                 "shasum": ""
             },
             "require": {
@@ -325,7 +325,7 @@
             "support": {
                 "source": "https://github.com/jmleroux/ZfcRbac/tree/route-permissions-guard"
             },
-            "time": "2014-06-14 14:56:12"
+            "time": "2014-06-14 22:24:37"
         },
         {
             "name": "zfr/rbac",

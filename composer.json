@@ -12,6 +12,10 @@
     "repositories": [
         {
             "type": "vcs",
+            "url": "https://github.com/jmleroux/rbac.git"
+        },
+        {
+            "type": "vcs",
             "url": "https://github.com/jmleroux/ZfcRbac.git"
         },
         {

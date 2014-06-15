@@ -9,16 +9,43 @@ class PermissionsController extends AbstractActionController
 {
     public function readAction()
     {
-        return new ViewModel();
+        $view = new ViewModel();
+        $view->setTemplate('application/permissions/double-guard');
+        $view->setVariables(
+            [
+                'route'           => 'permission-read',
+                'routePermission' => 'read',
+                'controller'      => __CLASS__,
+                'controllerRoles' => '[member]',
+            ]
+        );
+
+        return $view;
     }
 
     public function editAction()
     {
-        return new ViewModel();
+        $view = new ViewModel();
+        $view->setTemplate('application/permissions/simple-guard');
+        $view->setVariables(
+            [
+                'permission' => 'edit',
+            ]
+        );
+
+        return $view;
     }
 
     public function deleteAction()
     {
-        return new ViewModel();
+        $view = new ViewModel();
+        $view->setTemplate('application/permissions/simple-guard');
+        $view->setVariables(
+            [
+                'permission' => 'delete',
+            ]
+        );
+
+        return $view;
     }
 }

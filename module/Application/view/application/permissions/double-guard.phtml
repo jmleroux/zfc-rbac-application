@@ -1,0 +1,22 @@
+<div class="row">
+    <h3>Welcome to this protected page</h3>
+
+    <p>To access this page, you have succesfully passed two verifications :
+    <ul>
+        <li>
+            A route permission check :
+            <ul>
+                <li>route = <?php echo $this->route ?></li>
+                <li>permission = <?php echo $this->routePermission ?></li>
+            </ul>
+        </li>
+        <li>
+            A controller permission check :
+            <ul>
+                <li>controller = <?php echo $this->controller ?></li>
+                <li>roles = <?php echo $this->controllerRoles ?></li>
+            </ul>
+        </li>
+    </ul>
+    </p>
+</div>
