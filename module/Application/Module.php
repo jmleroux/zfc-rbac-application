@@ -16,9 +16,16 @@ class Module
 {
     public function onBootstrap(MvcEvent $e)
     {
-        $eventManager        = $e->getApplication()->getEventManager();
+        $eventManager = $e->getApplication()->getEventManager();
+
         $moduleRouteListener = new ModuleRouteListener();
         $moduleRouteListener->attach($eventManager);
+
+        $serviceManager = $e->getApplication()->getServiceManager();
+
+        $eventManager->attach(
+            $serviceManager->get('ZfcRbac\View\Strategy\UnauthorizedStrategy')
+        );
     }
 
     public function getConfig()

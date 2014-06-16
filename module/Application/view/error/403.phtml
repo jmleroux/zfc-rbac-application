@@ -1,0 +1,19 @@
+<h1>A 403 error occurred</h1>
+
+<div class="col-md-4">
+    <img src="img/stop.png" alt="STOP">
+</div>
+
+<div class="col-md-8">
+    <p>You are not allowed to access this resource</p>
+
+    <h2>Details</h2>
+
+    <?php
+    switch ($this->error) {
+        case \ZfcRbac\Guard\GuardInterface::GUARD_UNAUTHORIZED:
+            echo '<p>Request was blocked by a ZfcRbac guard</p>';
+            break;
+    }
+    ?>
+</div>
