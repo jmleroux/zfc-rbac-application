@@ -26,7 +26,7 @@ class PermissionsController extends AbstractActionController
     public function editAction()
     {
         $view = new ViewModel();
-        $view->setTemplate('application/permissions/simple-guard');
+        $view->setTemplate('application/permissions/simple-permission-guard');
         $view->setVariables(
             [
                 'permission' => 'edit',
@@ -39,10 +39,23 @@ class PermissionsController extends AbstractActionController
     public function deleteAction()
     {
         $view = new ViewModel();
-        $view->setTemplate('application/permissions/simple-guard');
+        $view->setTemplate('application/permissions/simple-permission-guard');
         $view->setVariables(
             [
                 'permission' => 'delete',
+            ]
+        );
+
+        return $view;
+    }
+
+    public function ctrlEditAction()
+    {
+        $view = new ViewModel();
+        $view->setTemplate('application/permissions/simple-permission-guard');
+        $view->setVariables(
+            [
+                'permission' => 'edit',
             ]
         );
 

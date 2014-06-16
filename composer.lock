@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "16e629e0902956f71ec6ec4298b6d643",
+    "hash": "4ccb2545496b5e7a622b6d7eb1c434db",
     "packages": [
         {
             "name": "jmleroux/jml-rbac-zdb",
@@ -265,12 +265,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jmleroux/ZfcRbac.git",
-                "reference": "6984b01c00ac8492ede6f0ce08a8a06fa63220e7"
+                "reference": "79264653e15f93e929110e303999ccad698556d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jmleroux/ZfcRbac/zipball/6984b01c00ac8492ede6f0ce08a8a06fa63220e7",
-                "reference": "6984b01c00ac8492ede6f0ce08a8a06fa63220e7",
+                "url": "https://api.github.com/repos/jmleroux/ZfcRbac/zipball/79264653e15f93e929110e303999ccad698556d8",
+                "reference": "79264653e15f93e929110e303999ccad698556d8",
                 "shasum": ""
             },
             "require": {
@@ -325,7 +325,7 @@
             "support": {
                 "source": "https://github.com/jmleroux/ZfcRbac/tree/route-permissions-guard"
             },
-            "time": "2014-06-14 22:24:37"
+            "time": "2014-06-16 22:26:48"
         },
         {
             "name": "zfr/rbac",

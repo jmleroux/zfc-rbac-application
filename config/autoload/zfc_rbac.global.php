@@ -18,42 +18,49 @@
 
 return [
     'zfc_rbac' => [
-        'identity_provider' => 'Application\Authentication\RbacIdentityProvider',
-        'guest_role' => 'guest',
-        'guards' => [
-            'ZfcRbac\Guard\RouteGuard' => [
+        'identity_provider'     => 'Application\Authentication\RbacIdentityProvider',
+        'guest_role'            => 'guest',
+        'guards'                => [
+            'ZfcRbac\Guard\RouteGuard'                 => [
                 'admin-or-member' => ['admin', 'member'],
-                'member-only' => ['member'],
-                'admin-only' => ['admin'],
-                'other-only' => ['other'],
+                'member-only'     => ['member'],
+                'admin-only'      => ['admin'],
+                'other-only'      => ['other'],
             ],
-            'ZfcRbac\Guard\RoutePermissionsGuard' => [
-                'read-permission' => ['read'],
+            'ZfcRbac\Guard\RoutePermissionsGuard'      => [
+                'read-permission'   => ['read'],
                 'update-permission' => ['edit'],
                 'delete-permission' => ['delete'],
             ],
-            'ZfcRbac\Guard\ControllerGuard' => [
+            'ZfcRbac\Guard\ControllerGuard'            => [
                 [
                     'controller' => 'Application\Controller\Permissions',
                     'actions'    => ['read'],
                     'roles'      => ['member']
                 ]
             ],
+            'ZfcRbac\Guard\ControllerPermissionsGuard' => [
+                [
+                    'controller'  => 'Application\Controller\Permissions',
+                    'actions'     => ['ctrlEdit'],
+                    'permissions' => ['edit']
+                ]
+            ],
         ],
-        'protection_policy' => \ZfcRbac\Guard\GuardInterface::POLICY_ALLOW,
+        'protection_policy'     => \ZfcRbac\Guard\GuardInterface::POLICY_ALLOW,
         'role_provider_manager' => [
             'factories' => [
                 'JmlRbacZdb\Role\ZendDbRoleProvider' => 'JmlRbacZdb\Factory\ZendDbRoleProviderFactory'
             ]
         ],
-        'role_provider' => [
+        'role_provider'         => [
             'JmlRbacZdb\Role\ZendDbRoleProvider' => [
                 'connection' => 'Application\Factory\DbAdapter',
-                'options' => [
-                    'role_table' => 'role',
-                    'role_name_column' => 'name',
-                    'role_join_column' => 'role',
-                    'permission_table' => 'permission',
+                'options'    => [
+                    'role_table'             => 'role',
+                    'role_name_column'       => 'name',
+                    'role_join_column'       => 'role',
+                    'permission_table'       => 'permission',
                     'permission_name_column' => 'name',
                     'permission_join_column' => 'permission',
                 ],
@@ -66,7 +73,7 @@ return [
          * Configure the redirect strategy. It is used to redirect the user to another route when a user is
          * unauthorized
          */
-        'redirect_strategy' => [
+        'redirect_strategy'     => [
             /**
              * Enable redirection when the user is connected
              */

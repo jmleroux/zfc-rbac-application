@@ -71,6 +71,16 @@ return array(
                 ),
             ),
         ),
+        'edit-controller-permission' => array(
+            'type' => 'Zend\Mvc\Router\Http\Literal',
+            'options' => array(
+                'route' => '/edit-controller-permission',
+                'defaults' => array(
+                    'controller' => 'Application\Controller\Permissions',
+                    'action' => 'ctrlEdit',
+                ),
+            ),
+        ),
         'delete-permission' => array(
             'type' => 'Zend\Mvc\Router\Http\Literal',
             'options' => array(
