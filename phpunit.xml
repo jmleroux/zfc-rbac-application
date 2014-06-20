@@ -13,7 +13,7 @@
         >
     <testsuites>
         <testsuite name="mvc application">
-            <directory>./tests/MvcApplicationTest</directory>
+            <directory>./tests/ApplicationTest</directory>
         </testsuite>
     </testsuites>
 </phpunit>
